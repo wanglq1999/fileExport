@@ -40,7 +40,7 @@ public class StartBoot {
 			String sqlend = "'";
 			String colNames = map.get("colNames");
 			if("".equals(colNames)||null==colNames){
-				throw new Exception("ÅäÖÃÎÄ¼þÖÐcolNamesÎª¿Õ");
+				throw new Exception("colNamesä¸ºç©º");
 			}
 			String[] colName = colNames.split(",");
 //			String colNameThr = map.get("colNameThr"); 
@@ -48,7 +48,9 @@ public class StartBoot {
 			int other =0;
 			List rowListColName =new ArrayList();
 			for(String attribute : date) {
-
+				if(attribute.indexOf(".")>-1){
+					attribute=attribute.substring(0, attribute.lastIndexOf("."));
+				}
 				List rowList =new ArrayList();
 				
 				if(total==0){
@@ -66,24 +68,24 @@ public class StartBoot {
 				StringBuffer[] cols = new StringBuffer[colName.length];
 				while(resultSet.next()){
 //					System.out.println(resultSet.getString(colNameOne)+","+resultSet.getString(colNameTwo)+","+resultSet.getString("department"));
-//					custname.append(resultSet.getString(colNameTwo)).append("¡¢");
-//					department.append(resultSet.getString(colNameThr)).append("¡¢");
+//					custname.append(resultSet.getString(colNameTwo)).append("ï¿½ï¿½");
+//					department.append(resultSet.getString(colNameThr)).append("ï¿½ï¿½");
 					for(int i=0;i<colName.length;i++){
 						if(count==0){
 							cols[i]=new StringBuffer("");
 						}
-						cols[i].append(resultSet.getString(colName[i]).trim()).append("¡¢");
+						cols[i].append(resultSet.getString(colName[i]).trim()).append("ã€");
 					}
 					count ++;
 				}
 				if (count==0){
 					for(String colTmp:colName){
-						rowList.add("Êý¾Ý¿âÖÐÎÞ´Ë¿Í»§´úÂë");
+						rowList.add("æ•°æ®åº“æ— æ­¤ç”¨æˆ·è®°å½•");
 					}
 					other++;
 				}else{
 					for(int i=0;i<cols.length;i++){
-						rowList.add(cols[i].substring(0, cols[i].lastIndexOf("¡¢")));
+						rowList.add(cols[i].substring(0, cols[i].lastIndexOf("ã€")));
 					}
 				}
 				
@@ -93,7 +95,7 @@ public class StartBoot {
 			dbHelper.CloseConn();
 			ExcelUtil.writeExcelSimple(result, cellList);
 			System.out.println("over");	
-			bufferedWriter.write("¹²´¦ÀíÊý¾Ý"+String.valueOf(total)+"Ìõ£¬ÆäÖÐÊý¾Ý¿âÖÐÎÞ¼ÇÂ¼µÄÓÐ"+String.valueOf(other)+"Ìõ");
+			bufferedWriter.write("å…±å¤„ç† "+String.valueOf(total)+" æ¡æ•°æ®ï¼Œå…¶ä¸­ "+String.valueOf(other)+" æ¡æœªæŸ¥åˆ°ç”¨æˆ·è®°å½•");
 			bufferedWriter.newLine();
 		}catch(Exception e){
 			e.printStackTrace();

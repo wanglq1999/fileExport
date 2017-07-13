@@ -11,8 +11,7 @@ import java.util.List;
 public class DBHelper {  
     Connection connection = null;  
       
-    //È¡µÃÁ¬½Ó  
-    public boolean GetConn(String sUser, String sPwd, String dburl) {  
+    public boolean GetConn(String sUser, String sPwd, String dburl)throws  Exception{  
         if(connection!=null)return true;  
         try {             
             String sDriverName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";   
@@ -21,29 +20,25 @@ public class DBHelper {
             connection = DriverManager.getConnection(dburl, sUser, sPwd);  
   
         } catch (Exception ex) {  
-            System.out.println(ex.getMessage());  
-            return false;  
+            throw ex;
         }  
         return true;  
     }  
       
-    //¹Ø±ÕÁ¬½Ó  
     public void CloseConn()  
     {  
         try {  
         	connection.close();  
         	connection = null;  
         } catch (Exception ex) {  
-            System.out.println(ex.getMessage());  
             connection=null;   
         }  
     }  
    
       
       
-    public ResultSet GetResultSet(String sSQL,Object[] objParams)  
+    public ResultSet GetResultSet(String sSQL,Object[] objParams)  throws  Exception
     {  
-//        GetConn();  
         ResultSet rs=null;  
         try  
         {  
@@ -58,12 +53,12 @@ public class DBHelper {
             rs=ps.executeQuery();  
         }catch(Exception ex)  
         {  
-            System.out.println(ex.getMessage());  
-            CloseConn();  
+            throw ex;
+//            CloseConn();  
         }  
         finally  
         {  
-            //CloseConn();            
+//            CloseConn();            
         }  
         return rs;  
     }  
@@ -83,7 +78,7 @@ public class DBHelper {
             }  
             ResultSet rs=ps.executeQuery();  
             if(rs.next())  
-                return rs.getString(1);//Ë÷Òý´Ó1¿ªÊ¼  
+                return rs.getString(1);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¼  
         }catch(Exception ex)  
         {  
             System.out.println(ex.getMessage());  
@@ -112,27 +107,27 @@ public class DBHelper {
             ResultSet rs=ps.executeQuery();  
             ResultSetMetaData rsmd=rs.getMetaData();  
               
-            List<DataRow> row=new ArrayList<DataRow>(); //±íËùÓÐÐÐ¼¯ºÏ  
-            List<DataColumn> col=null; //ÐÐËùÓÐÁÐ¼¯ºÏ  
-            DataRow r=null;// µ¥¶ÀÒ»ÐÐ  
-            DataColumn c=null;//µ¥¶ÀÒ»ÁÐ  
+            List<DataRow> row=new ArrayList<DataRow>(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½  
+            List<DataColumn> col=null; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½  
+            DataRow r=null;// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½  
+            DataColumn c=null;//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½  
               
             String columnName;  
             Object value;  
             int iRowCount=0;  
-            while(rs.next())//¿ªÊ¼Ñ­»·¶ÁÈ¡£¬Ã¿´ÎÍù±íÖÐ²åÈëÒ»ÐÐ¼ÇÂ¼  
+            while(rs.next())//ï¿½ï¿½Ê¼Ñ­ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½Ò»ï¿½Ð¼ï¿½Â¼  
             {  
                 iRowCount++;  
-                col=new ArrayList<DataColumn>();//³õÊ¼»¯ÁÐ¼¯ºÏ  
+                col=new ArrayList<DataColumn>();//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½  
                 for(int i=1;i<=rsmd.getColumnCount();i++)  
                 {  
                     columnName=rsmd.getColumnName(i);  
                     value=rs.getObject(columnName);  
-                    c=new DataColumn(columnName,value);//³õÊ¼»¯µ¥ÔªÁÐ  
-                    col.add(c); //½«ÁÐÐÅÏ¢¼ÓÈëµ½ÁÐ¼¯ºÏ  
+                    c=new DataColumn(columnName,value);//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+                    col.add(c); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ëµ½ï¿½Ð¼ï¿½ï¿½ï¿½  
                 }  
-                r=new DataRow(col);//³õÊ¼»¯µ¥ÔªÐÐ  
-                row.add(r);//½«ÐÐÐÅÏ¢¼ÓÈëµ½ÐÐ¼¯ºÏ  
+                r=new DataRow(col);//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+                row.add(r);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ëµ½ï¿½Ð¼ï¿½ï¿½ï¿½  
             }  
             dt = new DataTable(row);  
             dt.RowCount=iRowCount;  

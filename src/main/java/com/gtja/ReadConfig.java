@@ -18,7 +18,7 @@ public class ReadConfig {
 		try{
 			inFile = new File(configFile);
 			input = new FileInputStream(inFile);
-			InputStreamReader inputStreamReader = new InputStreamReader(input,"UTF-8");
+			InputStreamReader inputStreamReader = new InputStreamReader(input,"GBK");
 			bufferedReader = new BufferedReader(inputStreamReader);
 			String readString = null;
 			while ((readString = bufferedReader.readLine())!= null){

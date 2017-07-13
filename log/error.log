@@ -1,0 +1,1 @@
+2017-07-12 13:58:16  [ AWT-EventQueue-0:0 ] - [ ERROR ]  Read config xml error:org.dom4j.DocumentException: E:\workspace\hobbies\config\config.xml (系统找不到指定的路径。) Nested exception: E:\workspace\hobbies\config\config.xml (系统找不到指定的路径。)

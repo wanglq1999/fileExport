@@ -27,10 +27,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
 	/** 
-	 * excelµ¼³öµ½Êä³öÁ÷ 
-	 * Ë­µ÷ÓÃË­¸ºÔğ¹Ø±ÕÊä³öÁ÷ 
-	 * @param os Êä³öÁ÷ 
-	 * @param excelExtName excelÎÄ¼şµÄÀ©Õ¹Ãû£¬Ö§³ÖxlsºÍxlsx£¬²»´øµãºÅ 
+	 * excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * Ë­ï¿½ï¿½ï¿½ï¿½Ë­ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * @param os ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * @param excelExtName excelï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½xlsï¿½ï¿½xlsxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	 * @param data  
 	 * @throws IOException 
 	 */  
@@ -42,7 +42,7 @@ public class ExcelUtil {
 	        } else if ("xlsx".equals(excelExtName)) {  
 	            wb = new XSSFWorkbook();  
 	        } else {  
-	            throw new Exception("µ±Ç°ÎÄ¼ş²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ï¿½ï¿½Ç°ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½Ä¼ï¿½");  
 	        }  
 	        for (String sheetName : data.keySet()) {  
 	            Sheet sheet = wb.createSheet(sheetName);  
@@ -66,11 +66,11 @@ public class ExcelUtil {
 	    }  
 	}  
 	/** 
-	 * excelµ¼³öµ½Êä³öÁ÷ 
-	 * Ë­µ÷ÓÃË­¸ºÔğ¹Ø±ÕÊä³öÁ÷ 
-	 * @param os Êä³öÁ÷ 
-	 * @param excelExtName excelÎÄ¼şµÄÀ©Õ¹Ãû£¬Ö§³ÖxlsºÍxlsx£¬²»´øµãºÅ 
-	 * @param data excelÊı¾İ£¬mapÖĞµÄkeyÊÇ±êÇ©Ò³µÄÃû³Æ£¬value¶ÔÓ¦µÄlistÊÇ±êÇ©Ò³ÖĞµÄÊı¾İ¡£listÖĞµÄ×ÓlistÊÇ±êÇ©Ò³ÖĞµÄÒ»ĞĞ£¬×ÓlistÖĞµÄ¶ÔÏóÊÇÒ»¸öµ¥Ôª¸ñµÄÊı¾İ£¬°üÀ¨ÊÇ·ñ¾ÓÖĞ¡¢¿ç¼¸ĞĞ¼¸ÁĞÒÔ¼°´æµÄÖµÊÇ¶àÉÙ 
+	 * excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * Ë­ï¿½ï¿½ï¿½ï¿½Ë­ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * @param os ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * @param excelExtName excelï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½xlsï¿½ï¿½xlsxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * @param data excelï¿½ï¿½ï¿½İ£ï¿½mapï¿½Ğµï¿½keyï¿½Ç±ï¿½Ç©Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½valueï¿½ï¿½Ó¦ï¿½ï¿½listï¿½Ç±ï¿½Ç©Ò³ï¿½Ğµï¿½ï¿½ï¿½ï¿½İ¡ï¿½listï¿½Ğµï¿½ï¿½ï¿½listï¿½Ç±ï¿½Ç©Ò³ï¿½Ğµï¿½Ò»ï¿½Ğ£ï¿½ï¿½ï¿½listï¿½ĞµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½ç¼¸ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç¶ï¿½ï¿½ï¿½ 
 	 * @throws IOException 
 	 */  
 	@SuppressWarnings("deprecation")
@@ -86,7 +86,7 @@ public class ExcelUtil {
 	            wb = new XSSFWorkbook();  
 	            isXls = false;  
 	        } else {  
-	            throw new Exception("µ±Ç°ÎÄ¼ş²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ï¿½ï¿½Ç°ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½Ä¼ï¿½");  
 	        }  
 	        cellStyle = wb.createCellStyle();  
 	        if (isXls) {  
@@ -99,11 +99,11 @@ public class ExcelUtil {
 	        for (String sheetName : data.keySet()) {  
 	            Sheet sheet = wb.createSheet(sheetName);  
 	            List<List<ExcelData>> rowList = data.get(sheetName);  
-	            //i ´ú±íµÚ¼¸ĞĞ ´Ó0¿ªÊ¼  
+	            //i ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½ï¿½0ï¿½ï¿½Ê¼  
 	            for (int i = 0; i < rowList.size(); i++) {  
 	                List<ExcelData> cellList = rowList.get(i);  
 	                Row row = sheet.createRow(i);  
-	                int j = 0;//j ´ú±íµÚ¼¸ÁĞ ´Ó0¿ªÊ¼  
+	                int j = 0;//j ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½ï¿½0ï¿½ï¿½Ê¼  
 	                for (ExcelData excelData : cellList) {  
 	                    if (excelData != null) {  
 	                        if (excelData.getColSpan() > 1 || excelData.getRowSpan() > 1) {  
@@ -133,99 +133,99 @@ public class ExcelUtil {
 	}  
 	public static void test() throws FileNotFoundException, IOException{
 		Map<String, List<List<ExcelData>>> data = new LinkedHashMap();  
-        List<List<ExcelData>> sheet1 = new ArrayList();//µÚÒ»Ò³  
+        List<List<ExcelData>> sheet1 = new ArrayList();//ï¿½ï¿½Ò»Ò³  
           
-        List<ExcelData> list1 = new ArrayList();//µÚÒ»ĞĞ  
-        ExcelData excelData = new ExcelData();//µÚÒ»¸öµ¥Ôª¸ñ  
+        List<ExcelData> list1 = new ArrayList();//ï¿½ï¿½Ò»ï¿½ï¿½  
+        ExcelData excelData = new ExcelData();//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(6);  
         excelData.setRowSpan(1);  
         excelData.setValue("xxx");  
         excelData.setAlignCenter(true);  
         list1.add(excelData);  
           
-        List<ExcelData> list2 = new ArrayList();//µÚ¶şĞĞ  
-        excelData = new ExcelData();//µÚÒ»¸öµ¥Ôª¸ñ  
+        List<ExcelData> list2 = new ArrayList();//ï¿½Ú¶ï¿½ï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("a");  
         list2.add(excelData);  
-        excelData = new ExcelData();//µÚ¶ş¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("b");  
         list2.add(excelData);  
-        excelData = new ExcelData();//µÚÈı¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(2);  
         excelData.setRowSpan(4);  
         excelData.setValue("c");  
         excelData.setAlignCenter(true);  
         list2.add(excelData);  
-        excelData = new ExcelData();//µÚËÄ¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(2);  
         excelData.setRowSpan(2);  
         excelData.setValue("d");  
         excelData.setAlignCenter(true);  
         list2.add(excelData);  
           
-        List<ExcelData> list3 = new ArrayList();//µÚÈıĞĞ  
-        excelData = new ExcelData();//µÚÒ»¸öµ¥Ôª¸ñ  
+        List<ExcelData> list3 = new ArrayList();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("e");  
         list3.add(excelData);  
-        excelData = new ExcelData();//µÚ¶ş¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("f");  
         list3.add(excelData);  
-        list3.add(null);//µÚÈı¸öµ¥Ôª¸ñ  
-        list3.add(null);//µÚËÄ¸öµ¥Ôª¸ñ  
-        list3.add(null);//µÚÎå¸öµ¥Ôª¸ñ  
-        list3.add(null);//µÚÁù¸öµ¥Ôª¸ñ  
+        list3.add(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        list3.add(null);//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        list3.add(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        list3.add(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
           
-        List<ExcelData> list4 = new ArrayList();//µÚËÄĞĞ  
-        excelData = new ExcelData();//µÚÒ»¸öµ¥Ôª¸ñ  
+        List<ExcelData> list4 = new ArrayList();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("i");  
         list4.add(excelData);  
-        excelData = new ExcelData();//µÚ¶ş¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("j");  
         list4.add(excelData);  
-        list4.add(null);//µÚÈı¸öµ¥Ôª¸ñ  
-        list4.add(null);//µÚËÄ¸öµ¥Ôª¸ñ  
-        excelData = new ExcelData();//µÚÎå¸öµ¥Ôª¸ñ  
+        list4.add(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        list4.add(null);//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setRowSpan(1);  
         excelData.setColSpan(1);  
         excelData.setValue("g");  
         list4.add(excelData);  
-        excelData = new ExcelData();//µÚÁù¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setRowSpan(1);  
         excelData.setColSpan(1);  
         excelData.setValue("h");  
         list4.add(excelData);  
           
-        List<ExcelData> list5 = new ArrayList();//µÚÎåĞĞ  
-        excelData = new ExcelData();//µÚÒ»¸öµ¥Ôª¸ñ  
+        List<ExcelData> list5 = new ArrayList();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("k");  
         list5.add(excelData);  
-        excelData = new ExcelData();//µÚ¶ş¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setColSpan(1);  
         excelData.setRowSpan(1);  
         excelData.setValue("l");  
         list5.add(excelData);  
-        list5.add(null);//µÚÈı¸öµ¥Ôª¸ñ  
-        list5.add(null);//µÚËÄ¸öµ¥Ôª¸ñ  
-        excelData = new ExcelData();//µÚÎå¸öµ¥Ôª¸ñ  
+        list5.add(null);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        list5.add(null);//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setRowSpan(1);  
         excelData.setColSpan(1);  
         excelData.setValue("m");  
         list5.add(excelData);  
-        excelData = new ExcelData();//µÚÁù¸öµ¥Ôª¸ñ  
+        excelData = new ExcelData();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
         excelData.setRowSpan(1);  
         excelData.setColSpan(1);  
         excelData.setValue("n");  
@@ -237,17 +237,17 @@ public class ExcelUtil {
         sheet1.add(list4);  
         sheet1.add(list5);  
           
-        data.put("±í1", sheet1);  
+        data.put("ï¿½ï¿½1", sheet1);  
           
         testWrite(new FileOutputStream(new File("C:\\Users\\wanglq\\Desktop\\test.xlsx")), "xlsx", data);
 	}
 	
 	/** 
-	 * ÊÊÓÃÓÚÃ»ÓĞ±êÌâĞĞµÄexcel£¬ÀıÈç 
-	 * ÕÅÈı   25Ëê     ÄĞ   175cm 
-	 * ÀîËÄ   22Ëê     Å®   160cm 
-	 * Ã¿Ò»ĞĞ¹¹³ÉÒ»¸ömap£¬keyÖµÊÇÁĞ±êÌâ£¬valueÊÇÁĞÖµ¡£Ã»ÓĞÖµµÄµ¥Ôª¸ñÆävalueÖµÎªnull 
-	 * ·µ»Ø½á¹û×îÍâ²ãµÄlist¶ÔÓ¦Ò»¸öexcelÎÄ¼ş£¬µÚ¶ş²ãµÄlist¶ÔÓ¦Ò»¸ösheetÒ³£¬µÚÈı²ãµÄmap¶ÔÓ¦sheetÒ³ÖĞµÄÒ»ĞĞ 
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½Ğµï¿½excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * ï¿½ï¿½ï¿½ï¿½   25ï¿½ï¿½     ï¿½ï¿½   175cm 
+	 * ï¿½ï¿½ï¿½ï¿½   22ï¿½ï¿½     Å®   160cm 
+	 * Ã¿Ò»ï¿½Ğ¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½mapï¿½ï¿½keyÖµï¿½ï¿½ï¿½Ğ±ï¿½ï¿½â£¬valueï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ã»ï¿½ï¿½Öµï¿½Äµï¿½Ôªï¿½ï¿½ï¿½ï¿½valueÖµÎªnull 
+	 * ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½listï¿½ï¿½Ó¦Ò»ï¿½ï¿½excelï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½listï¿½ï¿½Ó¦Ò»ï¿½ï¿½sheetÒ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½Ó¦sheetÒ³ï¿½Ğµï¿½Ò»ï¿½ï¿½ 
 	 * @throws Exception  
 	 */  
 	public static List<List<List<String>>> readExcelWithoutTitle(String filepath) throws Exception{  
@@ -262,24 +262,24 @@ public class ExcelUtil {
 	        } else if (fileType.equals("xlsx")) {  
 	            wb = new XSSFWorkbook(is);  
 	        } else {  
-	            throw new Exception("¶ÁÈ¡µÄ²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ï¿½ï¿½È¡ï¿½Ä²ï¿½ï¿½ï¿½excelï¿½Ä¼ï¿½");  
 	        }  
 	          
-	        List<List<List<String>>> result = new ArrayList<List<List<String>>>();//¶ÔÓ¦excelÎÄ¼ş  
+	        List<List<List<String>>> result = new ArrayList<List<List<String>>>();//ï¿½ï¿½Ó¦excelï¿½Ä¼ï¿½  
 	          
 	        int sheetSize = wb.getNumberOfSheets();  
-	        for (int i = 0; i < sheetSize; i++) {//±éÀúsheetÒ³  
+	        for (int i = 0; i < sheetSize; i++) {//ï¿½ï¿½ï¿½ï¿½sheetÒ³  
 	            Sheet sheet = wb.getSheetAt(i);  
-	            List<List<String>> sheetList = new ArrayList<List<String>>();//¶ÔÓ¦sheetÒ³  
+	            List<List<String>> sheetList = new ArrayList<List<String>>();//ï¿½ï¿½Ó¦sheetÒ³  
 	              
 	            int rowSize = sheet.getLastRowNum() + 1;  
-	            for (int j = 0; j < rowSize; j++) {//±éÀúĞĞ  
+	            for (int j = 0; j < rowSize; j++) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 	                Row row = sheet.getRow(j);  
-	                if (row == null) {//ÂÔ¹ı¿ÕĞĞ  
+	                if (row == null) {//ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½  
 	                    continue;  
 	                }  
-	                int cellSize = row.getLastCellNum();//ĞĞÖĞÓĞ¶àÉÙ¸öµ¥Ôª¸ñ£¬Ò²¾ÍÊÇÓĞ¶àÉÙÁĞ  
-	                List<String> rowList = new ArrayList<String>();//¶ÔÓ¦Ò»¸öÊı¾İĞĞ  
+	                int cellSize = row.getLastCellNum();//ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½  
+	                List<String> rowList = new ArrayList<String>();//ï¿½ï¿½Ó¦Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 	                for (int k = 0; k < cellSize; k++) {  
 	                    Cell cell = row.getCell(k);  
 	                    String value = null;  
@@ -307,7 +307,7 @@ public class ExcelUtil {
 	}  
 	
 	/** 
-	 * ¶ÁÈ¡
+	 * ï¿½ï¿½È¡
 	 * @throws Exception  
 	 */  
 	public static List<String> readExcelSimple(String filepath) throws Exception{  
@@ -322,20 +322,20 @@ public class ExcelUtil {
 	        } else if (fileType.equals("xlsx")) {  
 	            wb = new XSSFWorkbook(is);  
 	        } else {  
-	            throw new Exception("¶ÁÈ¡µÄ²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ä¸è¯†åˆ«çš„æ ¼å¼");  
 	        }  
-            List<String> rowList = new ArrayList<String>();//¶ÔÓ¦Ò»¸öÊı¾İĞĞ  
+            List<String> rowList = new ArrayList<String>();//ï¿½ï¿½Ó¦Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 	        int sheetSize = wb.getNumberOfSheets();  
-	        for (int i = 0; i < sheetSize; i++) {//±éÀúsheetÒ³  
+	        for (int i = 0; i < sheetSize; i++) {//ï¿½ï¿½ï¿½ï¿½sheetÒ³  
 	            Sheet sheet = wb.getSheetAt(i);  
 	              
 	            int rowSize = sheet.getLastRowNum() + 1;  
-	            for (int j = 0; j < rowSize; j++) {//±éÀúĞĞ  
+	            for (int j = 0; j < rowSize; j++) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 	                Row row = sheet.getRow(j);  
-	                if (row == null) {//ÂÔ¹ı¿ÕĞĞ  
+	                if (row == null) {//ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½  
 	                    continue;  
 	                }  
-	                int cellSize = row.getLastCellNum();//ĞĞÖĞÓĞ¶àÉÙ¸öµ¥Ôª¸ñ£¬Ò²¾ÍÊÇÓĞ¶àÉÙÁĞ  
+	                int cellSize = row.getLastCellNum();//ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½  
 
 	                for (int k = 0; k < cellSize; k++) {  
 	                    Cell cell = row.getCell(k);  
@@ -343,6 +343,9 @@ public class ExcelUtil {
 	                    if (cell != null) {  
 	                    	value = cell.toString(); 
 	                    }  
+	                    if(rowList.contains(value)){
+	                    	continue;
+	                    }
 	                    rowList.add(value);  
 	                }  
 	            }  
@@ -362,12 +365,12 @@ public class ExcelUtil {
 	}  
 	
 	/** 
-	 * ÊÊÓÃÓÚµÚÒ»ĞĞÊÇ±êÌâĞĞµÄexcel£¬ÀıÈç 
-	 * ĞÕÃû   ÄêÁä  ĞÔ±ğ  Éí¸ß 
-	 * ÕÅÈı   25  ÄĞ   175 
-	 * ÀîËÄ   22  Å®   160 
-	 * Ã¿Ò»ĞĞ¹¹³ÉÒ»¸ömap£¬keyÖµÊÇÁĞ±êÌâ£¬valueÊÇÁĞÖµ¡£Ã»ÓĞÖµµÄµ¥Ôª¸ñÆävalueÖµÎªnull 
-	 * ·µ»Ø½á¹û×îÍâ²ãµÄlist¶ÔÓ¦Ò»¸öexcelÎÄ¼ş£¬µÚ¶ş²ãµÄlist¶ÔÓ¦Ò»¸ösheetÒ³£¬µÚÈı²ãµÄmap¶ÔÓ¦sheetÒ³ÖĞµÄÒ»ĞĞ 
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ò»ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½Ğµï¿½excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½  ï¿½Ô±ï¿½  ï¿½ï¿½ï¿½ 
+	 * ï¿½ï¿½ï¿½ï¿½   25  ï¿½ï¿½   175 
+	 * ï¿½ï¿½ï¿½ï¿½   22  Å®   160 
+	 * Ã¿Ò»ï¿½Ğ¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½mapï¿½ï¿½keyÖµï¿½ï¿½ï¿½Ğ±ï¿½ï¿½â£¬valueï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ã»ï¿½ï¿½Öµï¿½Äµï¿½Ôªï¿½ï¿½ï¿½ï¿½valueÖµÎªnull 
+	 * ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½listï¿½ï¿½Ó¦Ò»ï¿½ï¿½excelï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½listï¿½ï¿½Ó¦Ò»ï¿½ï¿½sheetÒ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½Ó¦sheetÒ³ï¿½Ğµï¿½Ò»ï¿½ï¿½ 
 	 * @throws Exception  
 	 */  
 	public static List<List<Map<String, String>>> readExcelWithTitle(String filepath) throws Exception{  
@@ -382,32 +385,32 @@ public class ExcelUtil {
 	        } else if (fileType.equals("xlsx")) {  
 	            wb = new XSSFWorkbook(is);  
 	        } else {  
-	            throw new Exception("¶ÁÈ¡µÄ²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ä¸è¯†åˆ«çš„æ ¼å¼");  
 	        }  
 	          
-	        List<List<Map<String, String>>> result = new ArrayList<List<Map<String,String>>>();//¶ÔÓ¦excelÎÄ¼ş  
+	        List<List<Map<String, String>>> result = new ArrayList<List<Map<String,String>>>();//ï¿½ï¿½Ó¦excelï¿½Ä¼ï¿½  
 	          
 	        int sheetSize = wb.getNumberOfSheets();  
-	        for (int i = 0; i < sheetSize; i++) {//±éÀúsheetÒ³  
+	        for (int i = 0; i < sheetSize; i++) {//ï¿½ï¿½ï¿½ï¿½sheetÒ³  
 	            Sheet sheet = wb.getSheetAt(i);  
-	            List<Map<String, String>> sheetList = new ArrayList<Map<String, String>>();//¶ÔÓ¦sheetÒ³  
+	            List<Map<String, String>> sheetList = new ArrayList<Map<String, String>>();//ï¿½ï¿½Ó¦sheetÒ³  
 	              
-	            List<String> titles = new ArrayList<String>();//·ÅÖÃËùÓĞµÄ±êÌâ  
+	            List<String> titles = new ArrayList<String>();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄ±ï¿½ï¿½ï¿½  
 	              
 	            int rowSize = sheet.getLastRowNum() + 1;  
-	            for (int j = 0; j < rowSize; j++) {//±éÀúĞĞ  
+	            for (int j = 0; j < rowSize; j++) {
 	                Row row = sheet.getRow(j);  
-	                if (row == null) {//ÂÔ¹ı¿ÕĞĞ  
+	                if (row == null) {
 	                    continue;  
 	                }  
-	                int cellSize = row.getLastCellNum();//ĞĞÖĞÓĞ¶àÉÙ¸öµ¥Ôª¸ñ£¬Ò²¾ÍÊÇÓĞ¶àÉÙÁĞ  
-	                if (j == 0) {//µÚÒ»ĞĞÊÇ±êÌâĞĞ  
+	                int cellSize = row.getLastCellNum();
+	                if (j == 0) {
 	                    for (int k = 0; k < cellSize; k++) {  
 	                        Cell cell = row.getCell(k);  
 	                        titles.add(cell.toString());  
 	                    }  
-	                } else {//ÆäËûĞĞÊÇÊı¾İĞĞ  
-	                    Map<String, String> rowMap = new HashMap<String, String>();//¶ÔÓ¦Ò»¸öÊı¾İĞĞ  
+	                } else {
+	                    Map<String, String> rowMap = new HashMap<String, String>();
 	                    for (int k = 0; k < titles.size(); k++) {  
 	                        Cell cell = row.getCell(k);  
 	                        String key = titles.get(k);  
@@ -445,7 +448,7 @@ public class ExcelUtil {
 	        } else if (fileType.equals("xlsx")) {  
 	            wb = new XSSFWorkbook();  
 	        } else {  
-	            throw new Exception("¶ÁÈ¡µÄ²»ÊÇexcelÎÄ¼ş");  
+	            throw new Exception("ä¸è¯†åˆ«çš„æ ¼å¼");  
 	        }  
             Sheet sheet = wb.createSheet("result");  
             for (int i = 0; i < data.size(); i++) {  
