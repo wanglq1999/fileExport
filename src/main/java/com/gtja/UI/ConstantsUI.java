@@ -24,7 +24,7 @@ public class ConstantsUI {
     public final static String APP_NAME = "Data Sync";
     public final static String APP_VERSION = "v_1.60_160511";
     
-    public final static String APP_NAME_NEW = "Data Tool By 张婷，version：2017.07.12.001";
+    public final static String APP_NAME_NEW = "Data Tool，version：2017.07.12.002";
 
     /**
      * 主窗口大小
@@ -113,13 +113,13 @@ public class ConstantsUI {
      */
     // 按计划执行 默认
     public final static ImageIcon ICON_START_SCHEDULE = new ImageIcon(
-            CURRENT_DIR + File.separator + "icon" + File.separator + "startSchedule.png");
+            CURRENT_DIR + File.separator + "icon" + File.separator + "startEnable.png");
     // 按计划执行 激活
     public final static ImageIcon ICON_START_SCHEDULE_ENABLE = new ImageIcon(
-            CURRENT_DIR + File.separator + "icon" + File.separator + "startScheduleEnable.png");
+            CURRENT_DIR + File.separator + "icon" + File.separator + "start.png");
     // 按计划执行 失效
     public final static ImageIcon ICON_START_SCHEDULE_DISABLE = new ImageIcon(
-            CURRENT_DIR + File.separator + "icon" + File.separator + "startScheduleDisable.png");
+            CURRENT_DIR + File.separator + "icon" + File.separator + "startDisable.png");
     // 停止 默认
     public final static ImageIcon ICON_STOP = new ImageIcon(
             CURRENT_DIR + File.separator + "icon" + File.separator + "stop.png");
